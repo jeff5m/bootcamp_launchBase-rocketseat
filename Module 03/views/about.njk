@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block head %}
   <title>Sobre - Mayk Brito</title>
@@ -6,13 +6,13 @@
 
 {% block content %}
 
-<div id="wrapper">
-  <img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" alt="Jeff Pereira">
-  <h1>Jeff Pereira</h1>
-  <h2>Web Developer</h2>
-  <p>Estudante de Desenvolvimento Web. Recém apaixonado pela área e pela <a href="http://rocketseat.com.br"
-    target="_blank">RocketSeat</a>, que está me proporcionando um conhecimento fantástico.</p>
-</div>
+  <div id="wrapper">
+    <img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" alt="Jeff Pereira">
+    <h1>Jeff Pereira</h1>
+    <h2>Web Developer</h2>
+    <p>Estudante de Desenvolvimento Web. Recém apaixonado pela área e pela
+      <a href="http://rocketseat.com.br" target="_blank">RocketSeat</a>, que está me proporcionando um conhecimento fantástico.</p>
+  </div>
 
   <div id="links-footer" class="links">
     <a href="/" target="_blank">GitHub</a>
@@ -20,4 +20,4 @@
     <a href="/" target="_blank">Linkedin</a>
   </div>
 
-  {% endblock %}
+{% endblock %}
