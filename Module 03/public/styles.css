@@ -19,10 +19,10 @@ body {
 
 header {
     padding: 32px;
-    /* atalho padding e margin: Se aplicar uma propriedade, 
+    /* atalho padding e margin: Se aplicar uma propriedade,
                           vai aplicar em todos os lados. Se colocar 2ª propriedade,
-                          vai aplicar as laterais, se usar uma 3ª, vai aplicar ao 
-                          bottom, a primeira ao top e a segunda, as laterais. 
+                          vai aplicar as laterais, se usar uma 3ª, vai aplicar ao
+                          bottom, a primeira ao top e a segunda, as laterais.
                           Se aplicar a 4ª, segue sentido horário ao aplicar  */
     border-bottom: 1px solid #333;
     background: rgba(0, 0, 0, 0.1);
@@ -100,6 +100,7 @@ header {
 
 .card {
     background-color: var(--color-rocket);
+    display: grid;
 }
 
 .card__image-container img {
@@ -109,6 +110,7 @@ header {
 .card__content,
 .card__info {
     padding: 24px;
+    align-items: center;
 }
 
 .card__info{
