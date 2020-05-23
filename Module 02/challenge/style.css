@@ -1,0 +1,206 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap";
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: #282a36;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+header {
+    padding: 32px;
+    /* atalho padding e margin: Se aplicar um paropriedade,
+    vai aplicar em todos os lados. Se colocar 2ª propriedade,
+    vai aplicar as laterais, se usar uma 3ª, vai aplicar ao
+    bottom, a primeira ao top e a segunda, as laterais.
+    Se aplicar a 4ª, segue sentido horário ao aplicar  */
+    border-bottom: 1px solid #333;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#profile {
+    border-radius: 50%;
+    border: 5px solid #50fa7b;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    height: 300px;
+}
+
+body h1 {
+    margin: 0 30px;
+    text-decoration: none;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 3px;
+}
+
+body h3 {
+    color: white;
+    padding-bottom: 20px;
+}
+
+#description {
+    max-width: 500px;
+    margin: auto;
+    color: white;
+    font-size: 18px;
+}
+
+#techs {
+    color: white;
+    margin-top: 30px;
+    font-size: large;
+}
+
+#techs ul {
+    padding-top: 20px;
+}
+
+#techs p {
+    margin-bottom: 15px;
+}
+
+ul li {
+    display: inline;
+    font-size: 25px;
+    padding: 0 20px;
+}
+
+#links {
+    margin-top: 20px;
+}
+
+#links a {
+    color: white;
+    font-size: 18px;
+    line-height: 28px; /* dica: usar 10px a mais que o font-size*/
+    margin: 0px 16px;
+    padding: 0px 3px;
+}
+
+#links a:hover {
+    color: #50fa7b;
+    transition: color 200ms;
+}
+
+.nav_links {
+  text-align: center;
+}
+
+.nav_links a {
+  color: white;
+  font-size: 18px;
+  line-height: 28px;
+  /* dica: usar 10px a mais que o font-size*/
+  margin: 0 30px;
+  text-decoration: none;
+}
+
+.nav_links a:hover {
+  color: #50fa7b;
+  transition: color 200ms;
+}
+
+.wrapper h1 {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 20px;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.courses {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.courseCard {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  padding: 25px;
+  cursor: pointer;
+}
+
+.courseCard img {
+  display: block;
+  margin: 0 auto;
+}
+
+.courses .course_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.course_info p:nth-last-of-type(1) {
+  filter: brightness(90%);
+  padding-top: 5px;
+  text-align: right;
+  border-radius: 20px;
+}
+
+/* modal */
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position:fixed;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  margin: 5vh auto;
+  position: relative;
+}
+
+.modal .close-modal {
+  color: black;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+
+.modal .maximize-modal {
+  color: black;
+  position: absolute;
+  right: 32px;
+  top: 8px;
+  cursor: pointer;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+iframe {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+  left: 0;
+}
+
+.modal.maximize {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+}
