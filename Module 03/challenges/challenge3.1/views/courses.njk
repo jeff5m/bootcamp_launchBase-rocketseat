@@ -16,30 +16,19 @@
   </div>
 
   <section class="courses">
-    <div class="courseCard" id="starter">
-      <img src="assets/starter.svg" alt="starter">
-      <div class="course_info">
-        <p class="title">Starter</p>
-        <p class="number_modules">5 módulos</p>
-        <p class="price">Free</p>
+
+    {% for item in items %}
+
+      <div class="courseCard" id="{{item.id}}">
+        <img src="assets/{{item.id}}.svg" alt="{{item.title}}">
+        <div class="course_info">
+          <p class="title">{{item.title}}</p>
+          <p class="number_modules">{{item.modules}}</p>
+          <p class="price">{{item.price}}</p>
+        </div>
       </div>
-    </div>
-    <div class="courseCard" id="launchbase">
-      <img src="assets/launchbase.svg" alt="launchbase">
-      <div class="course_info">
-        <p class="title">Launch Base</p>
-        <p class="number_modules">11 módulos</p>
-        <p class="price">Pago</p>
-      </div>
-    </div>
-    <div class="courseCard" id="gostack">
-      <img src="assets/gostack.svg" alt="gostack">
-      <div class="course_info">
-        <p class="title">Go Stack</p>
-        <p class="number_modules">15 módulos</p>
-        <p class="price">Pago</p>
-      </div>
-    </div>
+
+    {% endfor %}
   </section>
 
   <div class="modal-overlay">
