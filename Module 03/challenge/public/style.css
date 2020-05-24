@@ -36,7 +36,7 @@ body h1 {
     font-size: 42px;
     font-weight: bold;
     color: white;
-    margin-bottom: 3px;
+    margin-bottom: 10px;
 }
 
 body h3 {
@@ -111,7 +111,6 @@ ul li {
   font-weight: bold;
   padding-top: 20px;
   color: white;
-  margin-bottom: 10px;
 }
 
 .courses {
@@ -212,24 +211,32 @@ iframe {
   display: flex;
   flex-direction: column;
   align-items: center ;
+  top: 0;
+}
+
+.courseCardSingle iframe {
+  top: 0;
+  bottom: 0;
 }
 
 .course_page {
   position: relative;
   margin: 0 auto;
-  padding-top: 70vh;
+  padding-top: 80vh;
   max-width: 90%;
   color: white;
 }
 
 .course_page p {
-  margin: 0 20px;
   font-weight: bold;
+  margin: 0 10px;
 }
 
 .course_info_single {
+  position: absolute;
   display: flex;
   float: left;
   justify-content: center;
   align-items: center;
+  bottom: 30px;
 }
