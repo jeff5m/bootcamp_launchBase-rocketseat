@@ -1,0 +1,51 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+
+  <title>Cursos</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon"/>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="wrapper">
+    <h1>Cursos</h1>
+  </div>
+
+  <section class="courses">
+
+    {% for item in items %}
+
+      <div class="courseCard" id="{{item.id}}">
+        <img src="assets/{{item.id}}.svg" alt="{{item.title}}">
+        <div class="course_info">
+          <p class="title">{{item.title}}</p>
+          <p class="number_modules">{{item.modules}}</p>
+          <p class="price">{{item.price}}</p>
+        </div>
+      </div>
+
+    {% endfor %}
+  </section>
+
+  <div class="modal-overlay">
+    <div class="modal">
+      <a href="" class="close-modal">
+        <i class="material-icons">close</i>
+      </a>
+      <a class="maximize-modal" id="max">
+        <i class="material-icons">check_box_outline_blank</i>
+      </a>
+
+      <div class="modal-content">
+        <iframe src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="/scripts.js"></script>
+
+{% endblock %}
