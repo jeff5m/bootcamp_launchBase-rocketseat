@@ -204,3 +204,22 @@ iframe {
   height: 100%;
   margin-top: 0;
 }
+
+/* === Video Page === */
+
+.course_page {
+  margin: 0 auto;
+  max-width: 500px;
+  color: white;
+}
+
+.course_page img {
+  padding-bottom: 20px;
+}
+
+.course_page p {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
