@@ -1,0 +1,30 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+
+  <title>{{item.tile}}</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon"/>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="wrapper">
+    <h1>{{item.title}}</h1>
+  </div>
+
+  <section class="courses">
+
+
+      <div class="courseCard" id="{{item.id}}">
+        <img src="assets/{{item.id}}.svg" alt="{{item.title}}">
+        <div class="course_info">
+          <p class="title">{{item.title}}</p>
+          <p class="number_modules">{{item.modules}}</p>
+          <p class="price">{{item.price}}</p>
+        </div>
+      </div>
+
+  </section>
+{% endblock %}
