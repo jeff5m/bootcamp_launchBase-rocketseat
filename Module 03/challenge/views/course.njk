@@ -16,9 +16,10 @@
 
   <section class="course_page">
 
-      <div class="courseCard" id="{{item.id}}">
-        <img src="../assets/{{item.id}}.svg" alt="{{item.title}}">
-        <div class="course_info">
+      <div class="courseCardSingle" id="{{item.id}}">
+        <iframe src="https://rocketseat.com.br/{{item.id}}"frameborder="0"></iframe>
+        {# <img src="../assets/{{item.id}}.svg" alt="{{item.title}}"> #}
+        <div class="course_info_single">
           <p class="title">{{item.title}}</p>
           <p class="number_modules">{{item.modules}}</p>
           <p class="price">{{item.price}}</p>

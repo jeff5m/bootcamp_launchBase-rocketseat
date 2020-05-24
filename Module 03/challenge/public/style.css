@@ -111,7 +111,7 @@ ul li {
   font-weight: bold;
   padding-top: 20px;
   color: white;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .courses {
@@ -196,6 +196,7 @@ iframe {
   position: absolute;
   top: 5%;
   left: 0;
+  background-color: white;
 }
 
 .modal.maximize {
@@ -207,19 +208,28 @@ iframe {
 
 /* === Video Page === */
 
+.courseCardSingle {
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+}
+
 .course_page {
+  position: relative;
   margin: 0 auto;
-  max-width: 500px;
+  padding-top: 70vh;
+  max-width: 90%;
   color: white;
 }
 
-.course_page img {
-  padding-bottom: 20px;
-}
-
 .course_page p {
-  display: flex;
-  justify-content: center;
-  padding: 8px;
+  margin: 0 20px;
+  font-weight: bold;
 }
 
+.course_info_single {
+  display: flex;
+  float: left;
+  justify-content: center;
+  align-items: center;
+}
