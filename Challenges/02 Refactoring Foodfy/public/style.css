@@ -17,8 +17,10 @@ body {
 }
 
 .container {
+    position: relative;
     margin: 0 auto;    
     width: 940px;
+    padding-bottom: 62px;
 }
 
 .navBar {
@@ -76,7 +78,6 @@ body {
 .indexHtml p {
     font-size: 18px;
     line-height: 28px;
-
 }
 
 .indexHtml img {
@@ -92,7 +93,6 @@ h2 {
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
-    width: 174px;
 }
 
 .cards {
@@ -122,9 +122,13 @@ h2 {
 }
 
 footer {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    height: 62px;
+    left: 0;
     margin-top: 50px;
     background-color: #FBDFDB;
-    height: 62px;
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -138,6 +142,10 @@ footer p {
 }
 
 /* pag About */
+
+.aboutHtml {
+    margin-bottom: 30px;
+}
 
 .aboutHtml h1 {
     margin-top: 50px;
@@ -178,6 +186,7 @@ footer p {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 4;
     grid-gap: 20px;
+    padding-bottom: 62px;
 }
 
 /* modal */
