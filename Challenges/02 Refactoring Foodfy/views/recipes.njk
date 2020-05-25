@@ -3,77 +3,13 @@
     {% block content %}
 
         <main class="recipesHtml">
-            <div class="recipeCard" id="burger">
-                <img src="assets/burger.png">
-                <h3 class="recipeTitle">Triplo bacon burger</h3>
-                <p class="chefName">Por Jorge Relato</p>
+        {% for item in items %}
+            <div class="recipeCard">
+                <img src="{{item.image}}">
+                <h3 class="recipeTitle">{{item.title}}</h3>
+                <p class="chefName">Por {{item.author}}</p>
             </div>
-        
-            <div class="recipeCard" id="pizza">
-                <img src="assets/pizza.png">
-                <h3 class="recipeTitle">Pizza 4 estações</h3>
-                <p class="chefName">Por Fabiana Melo</p>
-            </div>
-        
-            <div class="recipeCard" id="espaguete">
-                <img src="assets/espaguete.png">
-                <h3 class="recipeTitle">Espaguete ao alho</h3>
-                <p class="chefName">por Júlia Kinoto</p>
-            </div>
-        
-            <div class="recipeCard" id="lasanha">
-                <img src="assets/lasanha.png">
-                <h3 class="recipeTitle">Lasanha mac n' cheese</h3>
-                <p class="chefName">por Juliano Vieira</p>
-            </div>
-        
-            <div class="recipeCard" id="doce">
-                <img src="assets/doce.png">
-                <h3 class="recipeTitle">Docinhos pão-do-céu</h3>
-                <p class="chefName">por Ricardo Golves</p>
-            </div>
-        
-            <div class="recipeCard" id="asinhas">
-                <img src="assets/asinhas.png">
-                <h3 class="recipeTitle">Assinhas de frango ao barbecue</h3>
-                <p class="chefName">por Vania Steroski</p>
-            </div>
-
-            <div class="recipeCard" id="burger">
-                <img src="assets/burger.png">
-                <h3 class="recipeTitle">Triplo bacon burger</h3>
-                <p class="chefName">por Jorge Relato</p>
-            </div>
-        
-            <div class="recipeCard" id="pizza">
-                <img src="assets/pizza.png">
-                <h3 class="recipeTitle">Pizza 4 estações</h3>
-                <p class="chefName">por Fabiana Melo</p>
-            </div>
-        
-            <div class="recipeCard" id="espaguete">
-                <img src="assets/espaguete.png">
-                <h3 class="recipeTitle">Espaguete ao alho</h3>
-                <p class="chefName">por Júlia Kinoto</p>
-            </div>
-        
-            <div class="recipeCard" id="lasanha">
-                <img src="assets/lasanha.png">
-                <h3 class="recipeTitle">Lasanha mac n' cheese</h3>
-                <p class="chefName">por Juliano Vieira</p>
-            </div>
-        
-            <div class="recipeCard" id="doce">
-                <img src="assets/doce.png">
-                <h3 class="recipeTitle">Docinhos pão-do-céu</h3>
-                <p class="chefName">por Ricardo Golves</p>
-            </div>
-        
-            <div class="recipeCard" id="asinhas">
-                <img src="assets/asinhas.png">
-                <h3 class="recipeTitle">Assinhas de frango ao barbecue</h3>
-                <p class="chefName">por Vania Steroski</p>
-            </div>
+        {% endfor %}
         </main>
     </div>
 

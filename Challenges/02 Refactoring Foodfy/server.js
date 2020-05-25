@@ -2,6 +2,7 @@ const express = require('express')
 const nunjuks = require('nunjucks')
 
 const server = express()
+const recipes = require('./data')
 
 server.use(express.static('public'))
 
@@ -14,7 +15,9 @@ nunjuks.configure('views', {
 })
 
 server.get('/', function(req, res) {
-  return res.render('index')
+  const mostAccessedRecipes = recipes.slice(0, 6)
+
+  return res.render('index', { items: mostAccessedRecipes })
 })
 
 server.get('/about', function(req, res){
@@ -22,7 +25,7 @@ server.get('/about', function(req, res){
 })
 
 server.get('/recipes', function(req, res){
-  return res.render('recipes')
+  return res.render('recipes', { items: recipes })
 })
 
 server.listen(5000, function() {
