@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
 
+  {% block head %}
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodfy</title>
     <link rel="stylesheet" href="/style.css">
   </head>
+  {% endblock %}
 
   <body>
     <div class="container">
       <header class="navBar">
         <a href="/" id="brand">
-          <img src="assets/logo.png">
+          <img src="/assets/logo.png">
         </a>
         <div class="links">
           <a href="/about" class="link">Sobre</a>
