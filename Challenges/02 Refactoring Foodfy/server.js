@@ -14,28 +14,32 @@ nunjuks.configure('views', {
   noCache: true
 })
 
-server.get('/', function(req, res) {
+server.get('/', function (req, res) {
   const mostAccessedRecipes = recipes.slice(0, 6)
 
   return res.render('index', { items: mostAccessedRecipes })
 })
 
-server.get('/about', function(req, res){
+server.get('/about', function (req, res) {
   return res.render('about')
 })
 
-server.get('/recipes', function(req, res){
+server.get('/recipes', function (req, res) {
   return res.render('recipes', { items: recipes })
 })
 
 server.get('/recipes/:index', function (req, res) {
   const recipeIndex = req.params.index
   
-  return res.render('recipe', { item: recipes[recipeIndex] })
-
+  if (recipeIndex < recipes.length) {
+    return res.render('recipe', { item: recipes[recipeIndex] })
+    
+  } else {
+    return res.send('receita não encontrada')
+  }
 
 })
 
-server.listen(5000, function() {
+server.listen(5000, function () {
   console.log('server is running')
 })
