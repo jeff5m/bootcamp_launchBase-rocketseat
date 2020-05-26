@@ -7,20 +7,34 @@
 
 {% block content %}
 
-  
-  <img src="{{item.image}}" alt="Imagem de {{item.title}}">
+  <main class="recipe">
+    <img src="{{item.image}}" alt="Imagem de {{item.title}}">
 
-  <h1>{{item.title}}</h1>
-  <p>{{item.author}}</p>
+    <h1>{{item.title}}</h1>
+    <p>por
+      {{item.author}}</p>
 
-  <h2>Ingredientes</h2><button>Esconder</button>
-  <p>{{item.ingredients}}</p>
+    <h2>Ingredientes</h2>
+    <button>Esconder</button>
+    <ul class="hideable">
+      {% for ingredientLine in item.ingredients %}
+        <li>{{ingredientLine}}</li>
+      {% endfor %}
+    </ul>
 
-  <h2>Modo de preparo</h2><button>Esconder</button>
-  <p>{{item.preparation}}</p>
+    <h2>Modo de preparo</h2>
+    <button>Esconder</button>
+    <div class="hideable">
+      {% for preparationLine in item.preparation %}
+        <p>{{preparationLine}}</p>
+      {% endfor %}
+    </div>
 
-  <h2>Informações adicionais</h2><button>Esconder</button>
-  <p>{{item.information}}</p>
+    <h2>Informações adicionais</h2>
+    <button>Esconder</button>
+    <p class="hideable">{{item.information}}</p>
+
+  </main>
 
   <script src="/scripts.js"></script>
 
