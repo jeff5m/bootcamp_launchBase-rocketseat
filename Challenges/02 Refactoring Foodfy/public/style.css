@@ -45,11 +45,6 @@ body {
     margin-right: 30px;
 }
 
-/* bold link */
-.clicked {
-    font-weight: bold;
-}
-
 /* pag Index */
 
 .indexHtml {
@@ -249,3 +244,20 @@ footer p {
     visibility: visible;
 }
 
+/* === show/hide === */
+
+button {
+    text-decoration: none;
+    color: #777;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+:focus {
+    outline: none;
+}
+
+.clicked + p {
+    display: none;
+}
