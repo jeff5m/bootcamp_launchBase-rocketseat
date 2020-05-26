@@ -2,11 +2,12 @@
 
 {% block head %}
   <link rel="stylesheet" href="../../style.css">
+  <title>{{item.title}}</title>
 {% endblock %}
 
 {% block content %}
 
-  <img src="{{item.image}}" alt="">
+  <img src="{{item.image}}" alt="Imagem de {{item.title}}">
 
   <h1>{{item.title}}</h1>
   <p>{{item.author}}</p>
