@@ -49,6 +49,10 @@ body {
     padding-right: 30px;
 }
 
+.active {
+    font-weight: bold;
+ }
+
 footer {
     position: relative;
     bottom: 0;
@@ -187,7 +191,6 @@ footer p {
     line-height: 24px;
     color: #777;
     text-align: center;
-    margin-bottom: 50px;
 }
 
 
@@ -200,7 +203,11 @@ footer p {
     display: inline-block;
 }
 
-.recipe h2:last-of-type {
+#first {
+    margin-top: 50px;
+}
+
+#last {
     margin-top: 47px;
 }
 
