@@ -20,6 +20,28 @@ body {
     overflow-y: overlay;
 }
 
+/* === Error Page === */
+
+.error {
+    display: flex;
+    margin-top: 50px;
+    padding-left: 60px;
+    background-color: #FBDFDB;
+    border-radius: 30px;
+    height: 366px;
+    margin-top: 36px;
+    width: 940px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.error h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: bold;
+}
+
 .container {
     /* position: relative; */
     margin: 0 auto;
