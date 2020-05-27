@@ -31,7 +31,7 @@ server.get('/courses/:id', function(req,res) {
 	});
 
 	if (!course) {
-		return res.send('Curso não encontrado');
+		return res.render('not-found');
 	}
 
 	return res.render('course', { item: course });
