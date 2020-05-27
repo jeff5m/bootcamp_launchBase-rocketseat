@@ -40,6 +40,10 @@ server.get('/recipes/:index', function (req, res) {
 
 })
 
+server.use(function (req, res) {
+	res.status(404).render('not-found');
+});
+
 server.listen(5000, function () {
   console.log('server is running')
 })
