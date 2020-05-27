@@ -1,5 +1,14 @@
 const recipeCards = document.querySelectorAll('.recipeCard')
 
+const currentPage = location.pathname;
+const menuLinks = document.querySelectorAll('.navBar .link');
+
+for (link of menuLinks) {
+  if (currentPage.includes(link.getAttribute("href"))) {
+    link.classList.add("active");
+  }
+}
+
 for (let i = 0; i < recipeCards.length; i++) {
 	let recipeId = i
 	recipeCards[i].addEventListener('click', function () {
