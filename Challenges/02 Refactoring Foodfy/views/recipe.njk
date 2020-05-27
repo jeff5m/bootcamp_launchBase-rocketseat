@@ -14,17 +14,17 @@
     <p>por
       {{item.author}}</p>
 
-    <h2>Ingredientes</h2>
-    <button>Esconder</button>
+    <div>
+    <h2>Ingredientes</h2><button>Esconder</button>
     <ul class="hideable">
       {% for ingredient in item.ingredients %}
         <li>{{ingredient}}</li>
       {% endfor %}
     </ul>
+    </div>
 
-    <h2>Modo de preparo</h2>
-    <button>Esconder</button>
-
+    <div>
+    <h2>Modo de preparo</h2><button>Esconder</button>
     <div class="hideable">
       <ol>
         {% for preparation in item.preparation %}
@@ -32,15 +32,17 @@
         {% endfor %}
       </ol>
     </div>
+    </div>
 
-    <h2>Informações adicionais</h2>
-    <button>Esconder</button>
+    <div>
+    <h2>Informações adicionais</h2><button>Esconder</button>
     {# {% set item = item.information %}
     {% for i in item | string | list %}
       <p>{{i}}</p>
     {% endfor %} #}
 
     <p class="hideable">{{item.information | replace('!', "!<br>") }}</p>
+    </div>
 
   </main>
 

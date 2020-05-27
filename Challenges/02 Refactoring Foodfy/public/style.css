@@ -197,6 +197,7 @@ footer p {
     margin-top: 39px;
     margin-bottom: 20px;
     width: fit-content;
+    display: inline-block;
 }
 
 .recipe h2:last-of-type {
