@@ -19,7 +19,7 @@ html::after {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(30, 30, 30, 0.6);
   left: 0;
   position: absolute;
 }
@@ -32,9 +32,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 6px;
-  background-color: #151515;
-  border-bottom: black 2px solid;
+  padding: 15px;
+  background-color: rgb(30, 30, 30);
+  background-image: linear-gradient(rgba(0, 0, 0, 1), #1e1e1e);
+  /* border-bottom: black 2px solid; */
 }
 
 .topBar a {
@@ -52,35 +53,43 @@ header {
   width: 100%;
   box-sizing: border-box;
   font-size: 22px;
-  background-color: #333;
   padding: 32px;
+  background-image: linear-gradient(rgb(30, 30, 30), rgba(30, 30, 30, 0.6));
   /* position: relative; */
 }
 
 .links a {
-  color: white;
   position: relative;
+  padding: 8px;
+  z-index: 1;
+  color: white;
 }
 
 .links a + a {
   margin-left: 25px;
 }
 
-.links a:hover {
-  color: #ed7800;
-}
-
 .links a::after {
+  z-index: -1;
   content: "";
   width: 0%;
-  height: 2px;
-  background-color: #ed7800;
+  height: 0%;
+  border-radius: 0px;
+  background-color: rgba(237, 120, 0, 0.6);
   left: 0;
-  bottom: -2px;
+  bottom: 0;
   position: absolute;
 }
 
 .links a:hover::after {
   width: 100%;
+  height: 100%;
+  border-radius: 25px;
   transition: all 300ms ease-in-out;
+}
+
+.links a.active {
+  font-weight: bold;
+  background-color: rgba(237, 120, 0, 0.6);
+  border-radius: 25px;
 }
