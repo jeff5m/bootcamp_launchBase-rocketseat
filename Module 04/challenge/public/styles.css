@@ -20,7 +20,7 @@ a {
   align-items: center;
   justify-content: flex-end;
   padding: 15px;
-  background-image: linear-gradient(rgb(15, 100, 135), rgba(15, 100, 135, 0.7));
+  background-image: linear-gradient(rgb(15, 100, 135), rgba(15, 100, 135, 0.6));
   /* border-bottom: black 2px solid; */
 }
 
@@ -39,12 +39,12 @@ header {
   width: 100%;
   box-sizing: border-box;
   font-size: 22px;
-  padding: 32px;
-  background-image: linear-gradient(rgba(15, 100, 135, 0.7), rgba(15, 100, 135, 0.1));
+  padding: 10px 0 20px;
+  background-image: linear-gradient(rgba(15, 100, 135, 0.6), rgba(15, 100, 135, 0.0));
 }
 
 .links {
-  padding: 20px 20px 0;
+  padding: 0 20px 20px;
 }
 
 .links a {
@@ -52,6 +52,7 @@ header {
   padding: 8px;
   z-index: 1;
   color: white;
+  letter-spacing: 1px;
 }
 
 .links a + a {
@@ -63,8 +64,8 @@ header {
   content: "";
   width: 0%;
   height: 0%;
-  border-radius: 0px;
-  background-color: rgba(15, 100, 135, 0.7);
+  border-radius: 25px;
+  background-color: rgb(15, 100, 135);
   left: 0;
   bottom: 0;
   position: absolute;
@@ -73,12 +74,77 @@ header {
 .links a:hover::after {
   width: 100%;
   height: 100%;
-  border-radius: 25px;
   transition: all 300ms ease-in-out;
 }
 
 .links a.active {
   font-weight: bold;
-  background-color: rgba(15, 100, 135, 0.7);
+  background-color: rgb(15, 100, 135);
   border-radius: 25px;
+}
+
+/* === CARD === */
+
+.card {
+  background-color: #FFA232;
+  width: 800px;
+  min-height: 400px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  border: 5px solid rgba(15, 100, 135, 0.7);
+  box-shadow: 20px 20px 50px -2px;
+
+  animation-name: card_animation;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes card_animation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+  to {
+    opacity: 1;
+  }
+}
+
+.card section {
+  padding: 25px;
+}
+
+
+/* === DETAILS === */
+
+.details .item {
+  border-top: 1px solid rgba(30, 30, 30, 0.5);
+  padding: 8px;
+}
+
+.details .item div:nth-child(1) {
+  color: #6B6B6B;
+  font-weight: bold;
+  margin-bottom: 6px;
+  letter-spacing: 0.8px;
+}
+
+.details .item div:nth-child(2) {
+  font-weight: bold;
+  font-size: 20px;
+  color: #3E3535;
+}
+
+.details .item span {
+  color: white;
+  background-color: rgba(15, 100, 135, 0.9);
+  padding: 6px;
+  border-radius: 25px;
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.details .item:first-child {
+  border: none;
 }
