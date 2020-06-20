@@ -8,11 +8,21 @@
 }
 
 body {
-  background-color: #CBC0AE;
+  background-color: #6a2c70;
 }
 
 a {
   text-decoration: none;
+}
+
+input:-webkit-autofill, input:focus:-webkit-autofill {
+  box-shadow: 0 0 0 100px #412743 inset;
+  -webkit-text-fill-color: white;
+}
+
+input:-internal-autofill-selected {
+  -webkit-appearance: menulist-button;
+  background-image: none !important;
 }
 
 .topBar {
@@ -20,7 +30,7 @@ a {
   align-items: center;
   justify-content: flex-end;
   padding: 15px;
-  background-image: linear-gradient(rgb(15, 100, 135), rgba(15, 100, 135, 0.6));
+  background-image: linear-gradient(rgba(162, 79, 102, 0.8), rgba(162, 79, 102, 0.6));
   /* border-bottom: black 2px solid; */
 }
 
@@ -40,7 +50,7 @@ header {
   box-sizing: border-box;
   font-size: 22px;
   padding: 10px 0 20px;
-  background-image: linear-gradient(rgba(15, 100, 135, 0.6), rgba(15, 100, 135, 0.0));
+  background-image: linear-gradient(rgba(162, 79, 102, 0.6), rgba(162, 79, 102, 0.0));
 }
 
 .links {
@@ -53,6 +63,7 @@ header {
   z-index: 1;
   color: white;
   letter-spacing: 1px;
+  font-weight: bold;
 }
 
 .links a + a {
@@ -65,7 +76,7 @@ header {
   width: 0%;
   height: 0%;
   border-radius: 25px;
-  background-color: rgb(15, 100, 135);
+  background-color: #f08a5d;
   left: 0;
   bottom: 0;
   position: absolute;
@@ -78,21 +89,21 @@ header {
 }
 
 .links a.active {
-  font-weight: bold;
-  background-color: rgb(15, 100, 135);
+  background-color: #f08a5d;
   border-radius: 25px;
 }
 
 /* === CARD === */
 
 .card {
-  background-color: #FFA232;
+  background-color: #412743;
   width: 800px;
   min-height: 400px;
   margin: 40px auto;
   display: grid;
   grid-template-columns: 40% 60%;
-  border: 5px solid rgba(15, 100, 135, 0.7);
+  border-radius: 10px;
+  overflow: hidden;
   box-shadow: 20px 20px 50px -2px;
 
   animation-name: card_animation;
@@ -119,11 +130,15 @@ header {
 
 .details .item {
   border-top: 1px solid rgba(30, 30, 30, 0.5);
-  padding: 8px;
+  padding: 20px 20px 12px 20px;
+}
+
+.details .item:first-child {
+  border: none;
 }
 
 .details .item div:nth-child(1) {
-  color: #6B6B6B;
+  color: #aaa;
   font-weight: bold;
   margin-bottom: 6px;
   letter-spacing: 0.8px;
@@ -132,19 +147,64 @@ header {
 .details .item div:nth-child(2) {
   font-weight: bold;
   font-size: 20px;
-  color: #3E3535;
+  color: #fff;
 }
 
 .details .item span {
   color: white;
-  background-color: rgba(15, 100, 135, 0.9);
+  background-color: #6a2c70;
   padding: 6px;
   border-radius: 25px;
   display: inline-block;
-  margin-right: 5px;
+  margin: 5px 5px 0 0;
   font-weight: bold;
 }
 
-.details .item:first-child {
+/* === FORM === */
+
+h3 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.details h3+.item {
   border: none;
+}
+
+select,
+input {
+  background-color: #412743;
+  outline: none;
+  color: #fff;
+}
+
+input {
+  font-size: 20px;
+  width: 100%;
+}
+
+input[type=radio] {
+  width: initial;
+  margin-right: 4px;
+}
+
+select option {
+  color: #000;
+}
+
+button[type=submit] {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #f08a5d;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #CB734C;
 }
