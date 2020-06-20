@@ -1,0 +1,14 @@
+{
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "http://google.com",
+      "name": "asdadsadsddasdadadaadasd",
+      "birth": -23890291200000,
+      "degree": "university",
+      "class_type": "elearning",
+      "lectures": "asdasdadad",
+      "created_at": 1592678535774
+    }
+  ]
+}
