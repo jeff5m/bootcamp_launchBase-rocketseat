@@ -1,6 +1,7 @@
 const fs = require('fs');
 const data = require('./data.json');
 
+//create
 exports.post = function(req, res) {
 	const keys = Object.keys(req.body);
 
@@ -13,11 +14,11 @@ exports.post = function(req, res) {
 	let { avatar_url, name, birth, degree, class_type, lectures } = req.body;
   
 	birth = Date.parse(birth);
-	const id = Number(data.instructors.length + 1);
+	const id = Number(data.teachers.length + 1);
 	const created_at = Date.now();
 
 
-	data.instructors.push({ 
+	data.teachers.push({ 
 		id,
 		avatar_url,
 		name,
