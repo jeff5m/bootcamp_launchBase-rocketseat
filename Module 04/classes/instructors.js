@@ -1,5 +1,33 @@
 const fs = require('fs');
 const data = require('./data.json');
+const { age } = require('./utils');
+const Intl = require ('intl');
+
+// show
+exports.show = function(req, res) {
+	// req.query = is any query parameters.
+	// req.body = is the actual body of the request
+	// req.params = is route parameters. Can catch more than one
+	
+	const { id } = req.params;
+
+	const foundInstructor = data.instructors.find(function(instructors){
+		return instructors.id == id;
+	});
+
+	if(!foundInstructor) {
+		return res.send('Instructor not found');
+	}
+	
+	const instructor = {
+		...foundInstructor,
+		age: age(foundInstructor.birth),
+		services: foundInstructor.services.split(','),
+		created_at: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at),
+	};
+
+	return res.render('instructors/show', { instructor });
+};
 
 // create
 exports.post = function(req, res) {
