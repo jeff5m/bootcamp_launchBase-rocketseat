@@ -38,3 +38,29 @@ exports.post = function(req, res) {
 
 	});
 };
+
+//show
+exports.show = function(req, res) {
+	const { id } = req.params;
+
+	const foundTeacher = data.teachers.find(function(teacher){
+		return teacher.id == id;
+	});
+
+	if(!foundTeacher) {
+		return res.send('Professor não encontrado');
+	}
+
+	const teacher = {
+		...foundTeacher,
+		age: '',
+		degree: '',
+		class_type: '',
+		lectures: '',
+		created_at: '',
+	};
+
+	return res.render('teachers/show', { teacher });
+};
+
+//edit
