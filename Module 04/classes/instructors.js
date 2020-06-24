@@ -11,8 +11,8 @@ exports.show = function(req, res) {
 	
 	const { id } = req.params;
 
-	const foundInstructor = data.instructors.find(function(instructors){
-		return instructors.id == id;
+	const foundInstructor = data.instructors.find(function(instructor){
+		return instructor.id == id;
 	});
 
 	if(!foundInstructor) {
