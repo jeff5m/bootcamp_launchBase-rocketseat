@@ -5,6 +5,7 @@
   padding: 0;
   border: none;
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box; 
 }
 
 body {
@@ -193,6 +194,7 @@ select option {
   color: #000;
 }
 
+a.button,
 button[type=submit] {
   width: 100%;
   margin-top: 10px;
@@ -205,6 +207,12 @@ button[type=submit] {
   cursor: pointer;
 }
 
+a.button {
+  display: inline-block;
+  text-align: center;
+}
+
+a.button:hover,
 button[type=submit]:hover {
   background-color: #CB734C;
 }

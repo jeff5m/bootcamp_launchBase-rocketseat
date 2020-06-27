@@ -25,7 +25,7 @@
       <div class="item">
         <div>Acompanhammento</div>
         <div>
-          {% for lecture in lectures %}
+          {% for lecture in teacher.lectures %}
           <span>{{lecture}}</span>
           {% endfor %}
         </div>
@@ -34,6 +34,9 @@
         <div>Desde</div>
         <div>{{teacher.created_at}}</div>
       </div>
+
+      <a href="#" class="button">Editar</a>
+      
     </section>
   </div>
 
