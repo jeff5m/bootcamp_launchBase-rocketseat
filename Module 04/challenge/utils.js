@@ -39,5 +39,14 @@ module.exports = {
 			break;
 		}
 		return class_type;
+	},
+	date: function (birthTimestamp) {
+		const date = new Date(birthTimestamp);
+
+		const year = date.getUTCFullYear();
+		const month = `0+${date.getUTCMonth()}`.slice(-2);
+		const day = `0+${date.getUTCDate()}`.slice(-2);
+
+		return (`${year}-${month}-${day}`);
 	}
 };

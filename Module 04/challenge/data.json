@@ -24,11 +24,21 @@
       "id": 3,
       "avatar_url": "http://google.com",
       "name": "Fabiana Melo",
-      "birth": 723772800000,
+      "birth": 8752000000,
       "degree": "doctorate",
       "class_type": "elearning",
       "lectures": "Artes, Literatura",
       "created_at": 1593300973757
+    },
+    {
+      "id": 4,
+      "avatar_url": "http://google.com",
+      "name": "Gilberto Souza",
+      "birth": 848880000000,
+      "degree": "university",
+      "class_type": "presential",
+      "lectures": "Biologia",
+      "created_at": 1593304760107
     }
   ]
 }
