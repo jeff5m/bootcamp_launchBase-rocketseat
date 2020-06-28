@@ -23,7 +23,11 @@
   <div>Grau de Escolaridade</div>
   <div>
     <select name="degree" form="teacherform">
-      <option value="" selected="true">{{teacher.degree}}</option>
+      {% set displayOption = teacher.degree %}
+      {% if not teacher.degree  %}
+      {% set displayOption = "Selecione sua formação"  %}
+      {% endif %}
+      <option value="" selected="true">{{displayOption}}</option>
       <option value="high_school">Ensino Médio Completo</option>
       <option value="university">Ensino Superior Completo</option>
       <option value="master">Mestrado</option>
