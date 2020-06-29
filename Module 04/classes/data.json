@@ -1,15 +1,6 @@
 {
   "instructors": [
     {
-      "id": 1,
-      "avatar_url": "http://google.com",
-      "name": "wrwe wrsdgf",
-      "birth": -23890291200000,
-      "gender": "M",
-      "services": "musculação, crossfit",
-      "created_at": 1592613152226
-    },
-    {
       "id": 2,
       "avatar_url": "http://google.com",
       "name": "wrwe wrsdgf",
