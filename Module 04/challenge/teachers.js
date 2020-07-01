@@ -79,7 +79,7 @@ exports.edit = function(req, res) {
 
 	const teacher = {
 		...foundTeacher,
-		degree: graduation(foundTeacher.degree),
+		// degree: graduation(foundTeacher.degree),
 		birth: date(foundTeacher.birth),
 	};
 
