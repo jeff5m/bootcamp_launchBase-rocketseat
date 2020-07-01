@@ -115,3 +115,7 @@ exports.update = function(req, res) {
 		return res.redirect(`/teachers/${id}`);
 	});
 };
+
+exports.delete = function(req, res) {
+	
+};
