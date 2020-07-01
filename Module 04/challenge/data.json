@@ -17,7 +17,7 @@
       "birth": -555292800000,
       "degree": "university",
       "class_type": "presential",
-      "lectures": "Matemática, Física, Estatística",
+      "lectures": "Matemática, Física, Estatística, Lógica",
       "created_at": 1593300904656
     },
     {
@@ -35,9 +35,9 @@
       "avatar_url": "http://google.com",
       "name": "Gilberto Souza",
       "birth": 848880000000,
-      "degree": "university",
-      "class_type": "presential",
-      "lectures": "Biologia",
+      "degree": "master",
+      "class_type": "elearning",
+      "lectures": "Biologia, Bioquímica, Microbiologia",
       "created_at": 1593304760107
     }
   ]
