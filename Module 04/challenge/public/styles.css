@@ -207,12 +207,21 @@ button[type=submit] {
   cursor: pointer;
 }
 
-a.button {
-  display: inline-block;
-  text-align: center;
-}
-
 a.button:hover,
 button[type=submit]:hover {
   background-color: #CB734C;
+}
+
+.wrap {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  /* margin: 0; */
+}
+
+#edit,
+#button-delete {
+  width: 200px;
+  flex: 1;
+  margin: 4px;
 }
