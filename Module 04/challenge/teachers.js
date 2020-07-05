@@ -3,6 +3,22 @@ const data = require('./data.json');
 const { age, graduation, class_type, date } = require('./utils');
 const Intl = require('intl');
 
+exports.index = function(req, res) {
+	const teachers = data.teachers;
+	let newTeachers = new Array();
+	
+	for (let teacher of teachers) {
+		const formatedLectures = teacher.lectures.split(',');
+
+		newTeachers.push({
+			...teacher,
+			lectures: formatedLectures
+		});
+	}
+
+	return res.render('teachers/index', { newTeachers });
+};
+
 //create
 exports.post = function(req, res) {
 	const keys = Object.keys(req.body);

@@ -225,3 +225,69 @@ button[type=submit]:hover {
   flex: 1;
   margin: 4px;
 }
+
+/* === index === */
+
+.table-container {
+  display: block;
+  padding: 40px;
+}
+
+.table-container thead tr th,
+.table-container tbody tr td {
+  text-align: center;
+}
+
+td, th {
+  padding: 16px;
+  border-bottom: 1px solid #331F35;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+th {
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+td {
+  color: white;
+  font-size: 18px;
+}
+
+tbody tr td:first-child {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  align-items: center;
+}
+
+tbody tr td:first-child span {
+  width: 48px;
+  height: 48px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  border: 1.5px solid #aaa;
+}
+
+tbody tr td:nth-of-type(2) span {
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #f08a5d;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+tbody tr td:last-child a {
+  padding: 8px 16px;
+  border-radius: 16px;
+  background-color: #f08a5d;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
