@@ -3,6 +3,22 @@ const data = require('./data.json');
 const { age, date } = require('./utils');
 const Intl = require ('intl');
 
+exports.index = function(req, res) {
+	const instructors = data.instructors;
+	let newInstructors = new Array();
+	
+	for (let i = 0; i < instructors.length; i++) {
+		let formatedServices = instructors[i].services.split(',');
+		
+		newInstructors.push({
+			...instructors[i],
+			services: formatedServices,	
+		});
+	}
+	
+	return res.render('instructors/index', { newInstructors });
+};
+
 // show
 exports.show = function(req, res) {
 	// req.query = is any query parameters.
@@ -108,7 +124,8 @@ exports.put = function(req, res) {
 	const instructor = {
 		...foundInstructor,
 		...req.body,
-		birth: Date.parse(req.body.birth)
+		birth: Date.parse(req.body.birth),
+		id:Number(req.body.id) 
 	};
 
 	data.instructors[index] = instructor;
@@ -121,7 +138,6 @@ exports.put = function(req, res) {
 };
 
 // delete
-
 exports.delete =function(req, res) {
 	const { id } = req.body;
 
