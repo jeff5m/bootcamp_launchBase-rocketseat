@@ -74,7 +74,7 @@ exports.post = function(req, res) {
 	fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
 		if(err) return res.send('Wright file error!');
 
-		return res.redirect('/instructors');
+		return res.redirect(`/instructors/${id}`);
 	});
 
 	// return res.send(req.body);
