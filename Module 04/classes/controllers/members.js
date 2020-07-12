@@ -82,7 +82,7 @@ exports.edit = function(req, res) {
 
 	const member = {
 		...foundMember,
-		birth: date(foundMember.birth) // return yyyy, month and day without zeros
+		birth: date(foundMember.birth).iso // return yyyy, month and day without zeros
 	};
 
 	return res.render('members/edit', { member } );
