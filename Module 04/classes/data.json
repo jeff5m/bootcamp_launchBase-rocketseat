@@ -10,6 +10,17 @@
       "blood": "O1",
       "weight": "105",
       "height": "188"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1518310790390-836058cb000b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "name": "Fernanda Melo",
+      "email": "fernandamelo@asdf.com",
+      "birth": 730598400000,
+      "gender": "F",
+      "blood": "O0",
+      "weight": "65",
+      "height": "171"
     }
   ],
   "instructors": [
