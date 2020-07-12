@@ -1,5 +1,17 @@
 {
-  "members": [],
+  "members": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1554344728-77cf90d9ed26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "name": "Douglas Mascharenhas",
+      "email": "douglasm@gmail.com",
+      "birth": 653875200000,
+      "gender": "M",
+      "blood": "O1",
+      "weight": "105",
+      "height": "188"
+    }
+  ],
   "instructors": [
     {
       "id": 2,
