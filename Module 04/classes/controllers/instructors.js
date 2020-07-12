@@ -104,7 +104,7 @@ exports.edit = function(req, res) {
 
 	const instructor = {
 		...foundInstructor,
-		birth: date(foundInstructor.birth) // return yyyy, month and day without zeros
+		birth: date(foundInstructor.birth).iso // return yyyy, month and day without zeros
 	};
 
 	return res.render('instructors/edit', { instructor } );
