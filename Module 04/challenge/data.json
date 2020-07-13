@@ -1,12 +1,22 @@
 {
-  "students": [],
+  "students": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1491308056676-205b7c9a7dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80",
+      "name": "Douglas Mascharenhas",
+      "birth": 1108425600000,
+      "email": "douglasm@gmail.com",
+      "grade": "2º Ano do Ensino Médio",
+      "hours": "40"
+    }
+  ],
   "teachers": [
     {
       "id": 1,
       "avatar_url": "https://images.unsplash.com/photo-1511629091441-ee46146481b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
       "name": "Fernando Alepo",
       "birth": 58752000000,
-      "degree": "doctorate",
+      "degree": "master",
       "class_type": "elearning",
       "lectures": "Química, Biologia",
       "created_at": 1592955362883
@@ -28,18 +38,8 @@
       "birth": 8726400000,
       "degree": "doctorate",
       "class_type": "elearning",
-      "lectures": "Artes, Literatura",
+      "lectures": "Artes, Literatura, Teatro",
       "created_at": 1593300973757
-    },
-    {
-      "id": 4,
-      "avatar_url": "https://images.unsplash.com/photo-1548449112-96a38a643324?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-      "name": "Gilberto Souza",
-      "birth": 848880000000,
-      "degree": "master",
-      "class_type": "elearning",
-      "lectures": "Biologia, Bioquímica, Microbiologia",
-      "created_at": 1593304760107
     }
   ]
 }

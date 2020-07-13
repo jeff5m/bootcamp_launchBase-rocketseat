@@ -2,16 +2,16 @@
 
 {% block content %}
 
-  <form class="card" method="POST" action="/teachers/{{teacher.id}}?_method=PUT" id="teacherform">
-    <section class="image" style="background: url({{teacher.avatar_url}}) no-repeat center center/cover"></section>
+  <form class="card" method="POST" action="/students/{{student.id}}?_method=PUT" id="studentform">
+    <section class="image" style="background: url({{student.avatar_url}}) no-repeat center center/cover"></section>
 
     <section class="details">
 
-      <h3>Editar Professor</h3>
+      <h3>Editar Estudante</h3>
 
-      {% include 'teachers/fields.njk' %}
+      {% include 'students/fields.njk' %}
 
-      <input type="hidden" name="id" value="{{ teacher.id }}">
+      <input type="hidden" name="id" value="{{ student.id }}">
 
     </section>
   </form>

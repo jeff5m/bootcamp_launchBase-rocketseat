@@ -1,7 +1,6 @@
 const fs = require('fs');
 const data = require('../data.json');
-const { age, graduation, class_type, date } = require('../utils');
-const Intl = require('intl');
+const { date, grade, age } = require('../utils');
 
 exports.index = function(req, res) {
 	return res.render('students/index', { students: data.students });
@@ -17,22 +16,20 @@ exports.post = function(req, res) {
 		}
 	}
   
-	let { avatar_url, name, birth, degree, class_type, lectures } = req.body;
-  
-	birth = Date.parse(birth);
-	const id = Number(data.students.length + 1);
-	const created_at = Date.now();
+	let id = 1;
+	const lastStudent = data.students[data.students.length - 1];
 
+	if (lastStudent) 
+		id = lastStudent.id + 1;
 
+	let birth = Date.parse(req.body.birth);
+	let hours = Number(req.body.hours);
+	
 	data.students.push({ 
 		id,
-		avatar_url,
-		name,
+		...req.body,
 		birth,
-		degree,
-		class_type,
-		lectures,
-		created_at
+		hours
 	});
 
 	fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err){
@@ -40,7 +37,7 @@ exports.post = function(req, res) {
 			return res.send('Ocorreu um erro, tente novamente');
 		}
     
-		return res.redirect('/students');
+		return res.redirect(`/students/${id}`);
 
 	});
 };
@@ -63,11 +60,9 @@ exports.show = function(req, res) {
 
 	const student = {
 		...foundStudent,
-		age: age(foundStudent.birth),
-		degree: graduation(foundStudent.degree),
-		class_type: class_type(foundStudent.class_type),
-		lectures: foundStudent.lectures.split(','),
-		created_at: new Intl.DateTimeFormat('pt-BR').format(foundStudent.created_at),
+		grade: grade(foundStudent.grade),
+		birth: age(foundStudent.birth),
+		birthDay: date(foundStudent.birth).birthDay
 	};
 
 	return res.render('students/show', { student });
@@ -87,8 +82,8 @@ exports.edit = function(req, res) {
 
 	const student = {
 		...foundStudent,
-		// degree: graduation(foundStudent.degree),
-		birth: date(foundStudent.birth),
+		grade: grade(foundStudent.grade),
+		birth: date(foundStudent.birth).iso,
 	};
 
 	return res.render('students/edit', { student });

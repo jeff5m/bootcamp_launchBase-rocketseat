@@ -37,12 +37,14 @@
 
       <div class="wrap">
         <a id="edit" href="/teachers/{{teacher.id}}/edit" class="button">Editar</a>
-        <form action="/teachers?_method=DELETE" method="post">
+        <form id="form-delete" action="/teachers?_method=DELETE" method="post">
           <input type="hidden" name="id" value="{{teacher.id}}">
           <button id="button-delete" type="submit">Deletar</button>
         </form>
       </div>
     </section>
   </div>
+
+  {% include 'confirmDelete.njk' %}
 
 {% endblock content %}  

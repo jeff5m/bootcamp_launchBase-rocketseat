@@ -3,46 +3,48 @@
 {% block content %}
 
   <div class="card">
-    <section class="image" style="background: url({{teacher.avatar_url}}) no-repeat center center/cover"></section>
+    <section class="image" style="background: url({{student.avatar_url}}) no-repeat center center/cover"></section>
 
     <section class="details">
       <div class="item">
-        <div>Professor</div>
-        <div>{{teacher.name}}</div>
+        <div>Estudante</div>
+        <div>{{student.name}}</div>
       </div>
+
       <div class="item">
         <div>Idade</div>
-        <div>{{teacher.age}}</div>
+        <div>{{student.birth}} anos</div>
+      </div>
+
+      <div class="item">
+        <div>Dia de Nascimento</div>
+        <div>{{student.birthDay}}</div>
+      </div>
+
+      <div class="item">
+        <div>Email</div>
+        <div>{{student.email}}</div>
       </div>
       <div class="item">
-        <div>Grau de Escolaridade</div>
-        <div>{{teacher.degree}}</div>
+        <div>Ano Escolar</div>
+        <div>{{student.grade}}</div>
       </div>
+
       <div class="item">
-        <div>Formato de Aula</div>
-        <div>{{teacher.class_type}}</div>
-      </div>
-      <div class="item">
-        <div>Acompanhammento</div>
-        <div>
-          {% for lecture in teacher.lectures %}
-          <span>{{lecture}}</span>
-          {% endfor %}
-        </div>
-      </div>
-      <div class="item">
-        <div>Desde</div>
-        <div>{{teacher.created_at}}</div>
+        <div>Carga Horária</div>
+        <div>{{student.hours}} horas</div>
       </div>
 
       <div class="wrap">
-        <a id="edit" href="/teachers/{{teacher.id}}/edit" class="button">Editar</a>
-        <form action="/teachers?_method=DELETE" method="post">
-          <input type="hidden" name="id" value="{{teacher.id}}">
+        <a id="edit" href="/students/{{student.id}}/edit" class="button">Editar</a>
+        <form id="form-delete" action="/students?_method=DELETE" method="post">
+          <input type="hidden" name="id" value="{{student.id}}">
           <button id="button-delete" type="submit">Deletar</button>
         </form>
       </div>
     </section>
   </div>
 
-{% endblock content %}  
+  {% include 'confirmDelete.njk' %}
+
+{% endblock content %}

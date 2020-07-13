@@ -47,6 +47,48 @@ module.exports = {
 		const month = `0${date.getUTCMonth() + 1}`.slice(-2);
 		const day = `0${date.getUTCDate()}`.slice(-2);
 
-		return (`${year}-${month}-${day}`);
+		return {
+			day,
+			month,
+			year,
+			iso: `${year}-${month}-${day}`,
+			birthDay: `${day}/${month}`
+		};
+	},
+	grade: function (grade) {
+		switch (grade) {
+		case '5th':
+			grade = '5º Ano do Ensino Fundamental';
+			break;
+
+		case '6th':
+			grade = '6º Ano do Ensino Fundamental';
+			break;
+			
+		case '7th':
+			grade = '7º Ano do Ensino Fundamental';
+			break;
+			
+		case '8th':
+			grade = '8º Ano do Ensino Fundamental';
+			break;
+
+		case '9th':
+			grade = '9º Ano do Ensino Fundamental';
+			break;
+	
+		case '1th':
+			grade = '1º Ano do Ensino Médio';
+			break;
+				
+		case '2th':
+			grade = '2º Ano do Ensino Médio';
+			break;
+				
+		case '3th':
+			grade = '3º Ano do Ensino Médio';
+			break;
+		}
+		return grade;
 	}
 };
