@@ -3,7 +3,17 @@ const data = require('../data.json');
 const { date, grade, age } = require('../utils');
 
 exports.index = function(req, res) {
-	return res.render('students/index', { students: data.students });
+	const oldStudents = data.students;
+	const students = new Array();
+	
+	for (let student of oldStudents) {
+		students.push({
+			...student,
+			grade: grade(student.grade)
+		});
+	}
+	
+	return res.render('students/index', { students });
 };
 
 //create
