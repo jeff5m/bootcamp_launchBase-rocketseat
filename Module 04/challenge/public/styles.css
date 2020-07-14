@@ -233,6 +233,17 @@ button[type=submit]:hover {
   padding: 40px;
 }
 
+.table-container a {
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+  margin-bottom: 8px;
+  display: inline-block;
+  background-color: #CB734C;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
 .table-container thead tr th,
 .table-container tbody tr td {
   text-align: center;
@@ -286,7 +297,7 @@ tbody tr td:nth-of-type(2) span {
 tbody tr td:last-child a {
   padding: 8px 16px;
   border-radius: 16px;
-  background-color: #f08a5d;
+  background-color: #CB734C;
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
