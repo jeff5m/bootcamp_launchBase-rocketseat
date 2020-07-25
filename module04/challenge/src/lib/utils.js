@@ -1,5 +1,5 @@
 module.exports = {
-	age: function(timestamp) {
+	age(timestamp) {
 		const todayDate = new Date();
 		const birthDate = new Date(timestamp);
     
@@ -12,7 +12,7 @@ module.exports = {
     
 		return age;
 	},
-	graduation: function(degree) {
+	graduation(degree) {
 		switch (degree) {
 		case 'high_school':
 			degree = 'Ensino Médio Completo';
@@ -29,7 +29,7 @@ module.exports = {
 		}
 		return degree;
 	},
-	class_type: function(class_type) {
+	class_type(class_type) {
 		switch (class_type) {
 		case 'elearning':
 			class_type = 'EAD';
@@ -40,7 +40,7 @@ module.exports = {
 		}
 		return class_type;
 	},
-	date: function (birthTimestamp) {
+	date(birthTimestamp) {
 		const date = new Date(birthTimestamp);
 
 		const year = date.getUTCFullYear();
@@ -55,7 +55,7 @@ module.exports = {
 			birthDay: `${day}/${month}`
 		};
 	},
-	grade: function (grade) {
+	grade(grade) {
 		switch (grade) {
 		case '5th':
 			grade = '5º Ano do Ensino Fundamental';
