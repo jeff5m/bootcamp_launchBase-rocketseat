@@ -12,22 +12,22 @@ module.exports = {
     
 		return age;
 	},
-	graduation(degree) {
-		switch (degree) {
+	graduation(education_level) {
+		switch (education_level) {
 		case 'high_school':
-			degree = 'Ensino Médio Completo';
+			education_level = 'Ensino Médio Completo';
 			break;
 		case 'university':
-			degree = 'Ensino Superior Completo';
+			education_level = 'Ensino Superior Completo';
 			break;
 		case 'master':
-			degree = 'Mestrado';
+			education_level = 'Mestrado';
 			break;
 		case 'doctorate':
-			degree = 'Doutorado';
+			education_level = 'Doutorado';
 			break;
 		}
-		return degree;
+		return education_level;
 	},
 	class_type(class_type) {
 		switch (class_type) {
@@ -40,9 +40,9 @@ module.exports = {
 		}
 		return class_type;
 	},
-	date(birthTimestamp) {
-		const date = new Date(birthTimestamp);
-
+	date(timestamp) {
+		const date = new Date(timestamp);
+		
 		const year = date.getUTCFullYear();
 		const month = `0${date.getUTCMonth() + 1}`.slice(-2);
 		const day = `0${date.getUTCDate()}`.slice(-2);
@@ -52,7 +52,8 @@ module.exports = {
 			month,
 			year,
 			iso: `${year}-${month}-${day}`,
-			birthDay: `${day}/${month}`
+			birthDay: `${day}/${month}`,
+			format: `${day}/${month}/${year}`
 		};
 	},
 	grade(grade) {

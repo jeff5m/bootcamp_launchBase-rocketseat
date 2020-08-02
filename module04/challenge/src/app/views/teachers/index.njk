@@ -20,8 +20,8 @@
               {{ teacher.name }}
             </td>
             <td>
-              {% for lecture in teacher.lectures %}
-              <span>{{lecture}}</span>
+              {% for subject in teacher.subjects_taught %}
+              <span>{{subject}}</span>
               {% endfor %}
             </td>
             <td><a href="/teachers/{{teacher.id}}">Ver</a></td>

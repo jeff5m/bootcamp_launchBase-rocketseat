@@ -12,11 +12,11 @@
       </div>
       <div class="item">
         <div>Idade</div>
-        <div>{{teacher.age}}</div>
+        <div>{{teacher.birth_date}} anos</div>
       </div>
       <div class="item">
         <div>Grau de Escolaridade</div>
-        <div>{{teacher.degree}}</div>
+        <div>{{teacher.education_level}}</div>
       </div>
       <div class="item">
         <div>Formato de Aula</div>
@@ -25,7 +25,7 @@
       <div class="item">
         <div>Acompanhammento</div>
         <div>
-          {% for lecture in teacher.lectures %}
+          {% for lecture in teacher.subjects_taught %}
           <span>{{lecture}}</span>
           {% endfor %}
         </div>

@@ -15,7 +15,7 @@
 <div class="item">
   <div>Data de Nascimento</div>
   <div>
-    <input type="date" name="birth" value="{{student.birth}}">
+    <input type="date" name="birth_date" value="{{student.birth_date}}">
   </div>
 </div>
 
@@ -31,11 +31,27 @@
   <div>
     <select name="grade" form="studentform">
       <option value="{{student.grade}}" selected="true">
-       {% if student.grade %}
-        {{student.grade}}
-        {%else%}
-       Selecione seu ano escolar
-       {% endif %}
+      {% set grade = student.grade %}
+      {% switch grade %}
+      {% case '5th'%}
+      5º Ano do Ensino Fundamental
+      {% case '6th'%}
+      6º Ano do Ensino Fundamental
+      {% case '7th'%}
+      7º Ano do Ensino Fundamental
+      {% case '8th'%}
+      8º Ano do Ensino Fundamental
+      {% case '9th'%}
+      9º Ano do Ensino Fundamental
+      {% case '1th'%}
+      1º Ano do Ensino Médio
+      {% case '2th'%}
+      2º Ano do Ensino Médio
+      {% case '3th'%}
+      3º Ano do Ensino Médio
+      {% default %}
+      Selecione seu ano escolar
+      {% endswitch %}
       </option>
       <option value="5th">5º Ano do Ensino Fundamental</option>
       <option value="6th">6º Ano do Ensino Fundamental</option>
@@ -52,7 +68,7 @@
 <div class="item">
   <div>Carga horária semanal</div>
   <div>
-    <input type="number" name="hours" value="{{student.hours}}">
+    <input type="number" name="hours" placeholder="em horas" value="{{student.hours}}">
   </div>
 </div>
 
