@@ -35,6 +35,11 @@
         <div>{{student.hours}} horas</div>
       </div>
 
+      <div class="item">
+        <div>Professor</div>
+        <div>{{student.teacher_name}}</div>
+      </div>
+
       <div class="wrap">
         <a id="edit" href="/students/{{student.id}}/edit" class="button">Editar</a>
         <form id="form-delete" action="/students?_method=DELETE" method="post">

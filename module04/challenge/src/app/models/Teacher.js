@@ -8,13 +8,12 @@ module.exports = {
 
     db.query(`SELECT * FROM teachers ORDER BY name ASC`, function (err, results) {
       if (err) throw `Database error! ${err}`
-
       
       for (teacher of results.rows) {
-        const formatedSubjects = teacher.subjects_taught.split(',')
+        const formattedSubjects = teacher.subjects_taught.split(',')
         newTeachers.push({
           ...teacher,
-          subjects_taught: formatedSubjects
+          subjects_taught: formattedSubjects
         })
       }
       callback(newTeachers)
@@ -59,6 +58,29 @@ module.exports = {
 
       callback(results.rows[0])
     })
+  },
+  findBy(filter, callback) {
+    const newTeachers = new Array()
+
+    db.query(`
+      SELECT teachers.*, count(students) AS total_students
+      FROM teachers
+      LEFT JOIN students ON (students.teacher_id = teachers.id)
+      WHERE teachers.name ILIKE '%${filter}%'
+      OR teachers.subjects_taught ILIKE '%${filter}%'
+      GROUP BY teachers.id
+      ORDER BY total_students DESC`, function(err, results) {
+        if (err) throw `Database error! ${err}`
+        
+        for (teacher of results.rows) {
+          const formattedSubjects = teacher.subjects_taught.split(',')
+          newTeachers.push({
+            ...teacher,
+            subjects_taught: formattedSubjects
+          })
+        }
+        callback(newTeachers)
+      })
   },
   update(data, callback) {
     const query = `

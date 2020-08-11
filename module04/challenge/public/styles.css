@@ -302,3 +302,34 @@ tbody tr td:last-child a {
   font-size: 16px;
   text-transform: uppercase;
 }
+
+/* === FILTER === */
+
+.table-container .header {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.table-container .header a {
+  margin-bottom: 0;
+  width: 120px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.table-container .header form {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+}
+
+.table-container .header form input {
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+.table-container .header form button {
+  margin: 0;
+}
