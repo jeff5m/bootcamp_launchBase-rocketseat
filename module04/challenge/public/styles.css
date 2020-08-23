@@ -239,7 +239,7 @@ button[type=submit]:hover {
   padding: 8px;
   margin-bottom: 8px;
   display: inline-block;
-  background-color: #CB734C;
+  background-color: #f08a5d;
   border-radius: 8px;
   font-size: 16px;
 }
@@ -332,4 +332,26 @@ tbody tr td:last-child a {
 
 .table-container .header form button {
   margin: 0;
+}
+
+/* === PAGINATION === */
+
+.table-container {
+  display: grid;
+  grid-template: 64px 1fr 16px / 1fr;
+}
+
+.table-container .pagination {
+  margin: 0;
+  align-self: end;
+  justify-self: center;
+}
+
+.pagination a {
+  margin: 0 8px;
+}
+
+.pagination a:hover {
+  background-color: #CB734C;
+  transition: 200ms;
 }
